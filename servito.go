@@ -10,15 +10,15 @@ import (
 )
 
 func StartServer() {
-	addr := fmt.Sprintf("%v:%v", config.Address, config.Port)
     var handler http.Handler
     if (config.CSRFEnable) {
         CSRF := csrf.Protect([]byte(config.CSRFKey))
+        csrf.Secure(!config.Debug)
         handler = CSRF(routes.NewRouter())
     } else {
         handler = routes.NewRouter()
     }
-    csrf.Secure(!config.Debug)
+    addr := fmt.Sprintf("%v:%v", config.Address, config.Port)
     srv := &http.Server{
 		Handler:      handler,
 		Addr:         addr,

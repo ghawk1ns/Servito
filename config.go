@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"log"
 	"os"
+    "runtime"
+    "path"
 )
 
 var config *configData
@@ -23,7 +25,12 @@ type configData struct {
 }
 
 func init() {
-	file, err := os.Open("config.json")
+    _, filename, _, ok := runtime.Caller(0)
+    if !ok {
+        panic("Couldn't get path for config.json")
+    }
+    configPath := path.Dir(filename) + "/config.json"
+	file, err := os.Open(configPath)
 	if err != nil {
 		log.Fatal(err)
 	}
