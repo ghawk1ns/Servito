@@ -4,6 +4,6 @@
   "port": "8000",
   "readTimeout": 15,
   "writeTimeout": 15,
-  "enableCSRF": true,
+  "enableCSRF": false,
   "csrfKey": "<CSRF-KEY>"
 }
