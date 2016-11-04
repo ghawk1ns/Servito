@@ -1,0 +1,9 @@
+{
+  "debug": true,
+  "address": "localhost",
+  "port": "8000",
+  "readTimeout": 15,
+  "writeTimeout": 15,
+  "enableCSRF": true,
+  "csrfKey": "<CSRF-KEY>"
+}
