@@ -4,9 +4,25 @@
 
 A small HTTP server in Go. A great start for small projects and prototyping.
 
-# Install and Run
+# Install
 ~~~~
 $ go get github.com/ghawk1ns/servito
-$ go install github.com/ghawk1ns/servito/cmd/servito
-$ $GOPATH/bin/servito
 ~~~~
+
+
+# Example
+https://github.com/GHawk1ns/Servito/blob/master/example/main.go
+
+# Config
+You can set these values individually or pass servito a JSON string, file, or path to a json file
+~~~
+{
+  "debug": true,
+  "address": string,
+  "port": string,
+  "readTimeout": int,
+  "writeTimeout": int,
+  "csrfEnable", bool,
+  "CSRFKey", string
+}
+~~~
