@@ -1,10 +1,11 @@
-package handlers
+package servito
 
 import (
     "testing"
     "net/http"
     "net/http/httptest"
     "encoding/json"
+    "github.com/ghawk1ns/servito/debugHandlers"
 )
 
 func TestHealthHandler(t *testing.T) {
@@ -17,7 +18,7 @@ func TestHealthHandler(t *testing.T) {
 
     // We create a ResponseRecorder (which satisfies http.ResponseWriter) to record the response.
     rr := httptest.NewRecorder()
-    handler := http.HandlerFunc(Health)
+    handler := http.HandlerFunc(handlers.Health)
 
     // Our handlers satisfy http.Handler, so we can call their ServeHTTP method
     // directly and pass in our Request and ResponseRecorder.

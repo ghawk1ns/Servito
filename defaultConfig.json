@@ -3,7 +3,5 @@
   "address": "localhost",
   "port": "8000",
   "readTimeout": 15,
-  "writeTimeout": 15,
-  "enableCSRF": false,
-  "csrfKey": "<CSRF-KEY>"
+  "writeTimeout": 15
 }
