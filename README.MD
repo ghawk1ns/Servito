@@ -1,5 +1,5 @@
 # Servito
-[![Build Status](https://travis-ci.org/GHawk1ns/Servito.svg?branch=master)](https://travis-ci.org/GHawk1ns/Servito)
+[![Build Status](https://travis-ci.org/ghawk1ns/Servito.svg?branch=master)](https://travis-ci.org/GHawk1ns/Servito)
 [![GoDoc](https://godoc.org/github.com/ghawk1ns/Servito?status.svg)](https://godoc.org/github.com/ghawk1ns/Servito)
 
 A small HTTP server in Go. A great start for small projects and prototyping.
